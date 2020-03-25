@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommentController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">comment-service</a> &gt; <a href="index.source.html" class="el_package">com.comment.controller</a> &gt; <span class="el_source">CommentController.java</span></div><h1>CommentController.java</h1><pre class="source lang-java linenums">package com.comment.controller;
+
+import java.util.Collection;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.comment.model.Comment;
+import com.comment.service.CommentService;
+
+@RestController
+@CrossOrigin(origins = &quot;http://localhost:4200&quot;)
+//@RequestMapping(value= &quot;/api/mongo/emp&quot;)
+<span class="fc" id="L26">public class CommentController {</span>
+
+	@Autowired
+	CommentService service;
+
+<span class="fc" id="L31">	private final Logger logger = LoggerFactory.getLogger(this.getClass());</span>
+
+	/**
+	 * Method to save comments in the db.
+	 * @param comment
+	 * @return
+	 */
+	@PostMapping(value= &quot;/comment/&quot;)
+	public void createComment(@RequestBody Comment comment) {
+<span class="fc" id="L40">		logger.debug(&quot;Saving comments.&quot;);</span>
+<span class="fc" id="L41">		service.createComment(comment);</span>
+		//return &quot;Comment records created.&quot;;
+<span class="fc" id="L43">	}</span>
+	
+	/**
+	 * Method to save comments in the db.
+	 * @param comment
+	 * @return
+	 */
+	@PostMapping(value= &quot;/comments/&quot;)
+	public String createComments(@RequestBody List&lt;Comment&gt; comment) {
+<span class="nc" id="L52">		logger.debug(&quot;Saving comments.&quot;);</span>
+<span class="nc" id="L53">		service.createComments(comment);</span>
+<span class="nc" id="L54">		return &quot;Comment records created.&quot;;</span>
+	}
+
+	/**
+	 * Method to fetch all comments from the db.
+	 * @return
+	 */
+	@GetMapping(value= &quot;/comment/&quot;)
+	public List&lt;Comment&gt; getAll() {
+<span class="fc" id="L63">		logger.debug(&quot;Getting all comments.&quot;);</span>
+<span class="fc" id="L64">		return service.getAllComments();</span>
+	}
+
+	/**
+	 * Method to fetch comment by id.
+	 * @param id
+	 * @return
+	 */
+	/*
+	 * @GetMapping(value= &quot;/comment/{commentId}/&quot;) public Optional&lt;Comment&gt;
+	 * getById(@PathVariable(value= &quot;commentId&quot;) int id) {
+	 * logger.debug(&quot;Getting comment with commentId= {}.&quot;, id); return
+	 * service.findCommentById(id); }
+	 */
+
+	/**
+	 * Method to update comment by id.
+	 * @param id
+	 * @param e
+	 * @return
+	 */
+	@PutMapping(value= &quot;/comment/{commentId}/&quot;)
+	public void update(@PathVariable(value= &quot;commentId&quot;) int id, @RequestBody Comment c) {
+<span class="fc" id="L87">		logger.debug(&quot;Updating comment with commentId= {}.&quot;, id);</span>
+<span class="fc" id="L88">		c.setId(id);</span>
+<span class="fc" id="L89">		service.updateComment(c);</span>
+		//return &quot;Comment record for commentId= &quot; + id + &quot; updated.&quot;;
+<span class="fc" id="L91">	}</span>
+
+	/**
+	 * Method to delete comment by id.
+	 * @param id
+	 * @return
+	 */
+	/*@DeleteMapping(value= &quot;/comment/{commentId}/&quot;)
+	public String delete(@PathVariable(value= &quot;commentId&quot;) int id) {
+		logger.debug(&quot;Deleting comment with commentId= {}.&quot;, id);
+		service.deleteCommentById(id);
+		return &quot;Comment record for commentId= &quot; + id + &quot; deleted.&quot;;
+	}*/
+	
+	@DeleteMapping(value= &quot;/comment/{commentId}/&quot;, produces = MediaType.TEXT_PLAIN_VALUE)
+	public @ResponseBody String delete(@PathVariable(value= &quot;commentId&quot;) int id) {
+<span class="nc" id="L107">		logger.debug(&quot;Deleting comment with commentId= {}.&quot;, id);</span>
+<span class="nc" id="L108">		service.deleteCommentById(id);</span>
+<span class="nc" id="L109">		return &quot;Comment record for commentId= &quot; + id + &quot; deleted.&quot;;</span>
+	}
+	
+	@GetMapping(value= &quot;/comment/{favouriteId}/&quot;)
+	public List&lt;Comment&gt; getByfavouriteItemsId(@PathVariable(value= &quot;favouriteId&quot;) int id) {
+<span class="fc" id="L114">		logger.debug(&quot;Getting comment with favouriteId= {}.&quot;, id);</span>
+<span class="fc" id="L115">		return service.findByFavouriteItemsId(id);</span>
+	}
+	
+	
+
+	/**
+	 * Method to delete all comments from the db.
+	 * @return
+	 */
+	@DeleteMapping(value= &quot;/comment/&quot;)
+	public String deleteAll() {
+<span class="fc" id="L126">		logger.debug(&quot;Deleting all comments.&quot;);</span>
+<span class="fc" id="L127">		service.deleteAllComments();</span>
+<span class="fc" id="L128">		return &quot;All comments records deleted.&quot;;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

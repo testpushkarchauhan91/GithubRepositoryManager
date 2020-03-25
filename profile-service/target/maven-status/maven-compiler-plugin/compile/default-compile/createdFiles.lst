@@ -1,0 +1,7 @@
+com/profile/service/UserServiceImpl.class
+com/profile/ProfileServiceApplication.class
+com/profile/dao/UserDao.class
+com/profile/service/UserService.class
+com/profile/model/User.class
+com/profile/jms/rabbitmq/MessageSender.class
+com/profile/controller/UserController.class

@@ -1,0 +1,7 @@
+http://localhost:8090/basicauth
+username: pushkar
+password: pushkar
+
+sudo kill -9 $(sudo lsof -t -i:8090)
+
+https://questionsforinterview.in/multi-threading-with-springboot-framework/

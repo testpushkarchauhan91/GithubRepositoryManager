@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommentServiceimpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">comment-service</a> &gt; <a href="index.source.html" class="el_package">com.comment.service</a> &gt; <span class="el_source">CommentServiceimpl.java</span></div><h1>CommentServiceimpl.java</h1><pre class="source lang-java linenums">package com.comment.service;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.comment.dao.CommentDao;
+import com.comment.model.Comment;
+
+@Service
+<span class="nc" id="L14">public class CommentServiceimpl implements CommentService {</span>
+
+	// The dao repository will use the Mongodb-Repository to perform the database operations.
+	@Autowired
+	CommentDao dao;
+
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#createComment(java.util.List)
+	 */
+	@Override
+	public void createComment(Comment comment) {
+<span class="nc" id="L25">		dao.save(comment);</span>
+<span class="nc" id="L26">	}</span>
+	
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#createComment(java.util.List)
+	 */
+	@Override
+	public void createComments(List&lt;Comment&gt; comment) {
+<span class="nc" id="L33">		dao.saveAll(comment);</span>
+<span class="nc" id="L34">	}</span>
+
+	/* (non-Javadoc)
+	 * @see com.assignment.springboot.mongo.service.Employeeservice#getAllEmployees()
+	 */
+	@Override
+	public List&lt;Comment&gt; getAllComments() {
+<span class="nc" id="L41">		return dao.findAll();</span>
+	}
+
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#findCommentById(int)
+	 */
+	@Override
+	public Optional&lt;Comment&gt; findCommentById(int id) {
+<span class="nc" id="L49">		return dao.findById(id);</span>
+	}
+
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#deleteCommentById(int)
+	 */
+	@Override
+	public void deleteCommentById(int id) {
+<span class="nc" id="L57">		dao.deleteById(id);</span>
+<span class="nc" id="L58">	}</span>
+
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#updateComment(int)
+	 */
+	@Override
+	public void updateComment(Comment comment) {
+<span class="nc" id="L65">		dao.save(comment);</span>
+<span class="nc" id="L66">	}</span>
+
+	/* (non-Javadoc)
+	 * @see com.comment.service.CommentService#deleteAllComments()
+	 */
+	@Override
+	public void deleteAllComments() {
+<span class="nc" id="L73">		dao.deleteAll();</span>
+<span class="nc" id="L74">	}</span>
+
+	@Override
+	public List&lt;Comment&gt; findByFavouriteItemsId(int id) {
+<span class="nc" id="L78">		return dao.findByFavouriteItemsId(id);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

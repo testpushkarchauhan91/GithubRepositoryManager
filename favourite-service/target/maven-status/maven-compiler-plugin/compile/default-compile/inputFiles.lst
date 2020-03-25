@@ -1,0 +1,9 @@
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/FavouriteServiceApplication.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/model/User.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/controller/FavouriteController.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/model/Favourite.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/service/FavouriteServiceImpl.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/controller/feign/FavouriteFeignController.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/dao/FavouriteDao.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/feignClient/ProfileClient.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/favourite-service/src/main/java/com/favourite/service/FavouriteService.java

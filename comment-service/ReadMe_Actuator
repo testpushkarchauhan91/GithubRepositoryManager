@@ -1,0 +1,7 @@
+http://localhost:8081/actuator/health
+http://localhost:8081/actuator/info
+http://localhost:8081/actuator/beans
+http://localhost:8081/actuator/env
+http://localhost:8081/actuator/env/java.home
+
+https://www.journaldev.com/21597/spring-boot-actuator-endpoints

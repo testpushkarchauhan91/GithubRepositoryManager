@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="7076" started-at="2020-03-25T05:55:46Z" finished-at="2020-03-25T05:55:53Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="7076" started-at="2020-03-25T05:55:46Z" finished-at="2020-03-25T05:55:53Z">
+      <class name="com.comment.controller.CommentControllerTest">
+        <test-method status="PASS" signature="testDeleteFavourite() throws java.lang.Exception" name="testDeleteFavourite" duration-ms="4505" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteFavourite -->
+        <test-method status="PASS" signature="testGetById() throws java.lang.Exception" name="testGetById" duration-ms="5284" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetById -->
+        <test-method status="PASS" signature="testUpdateFavourite() throws java.lang.Exception" name="testUpdateFavourite" duration-ms="5115" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateFavourite -->
+        <test-method status="PASS" signature="testCreateFavourite() throws java.lang.Exception" name="testCreateFavourite" duration-ms="5502" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateFavourite -->
+        <test-method status="PASS" signature="testDeleteAllFavourite() throws java.lang.Exception" name="testDeleteAllFavourite" duration-ms="5394" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteAllFavourite -->
+        <test-method status="PASS" signature="testGetAll() throws java.lang.Exception" name="testGetAll" duration-ms="5637" started-at="2020-03-25T05:55:47Z" finished-at="2020-03-25T05:55:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAll -->
+      </class> <!-- com.comment.controller.CommentControllerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+favourite-service,com.favourite.service,FavouriteServiceImpl,41,0,0,0,13,0,8,0,8,0
+favourite-service,com.favourite.model,Favourite,2,58,0,0,1,16,1,9,1,9
+favourite-service,com.favourite.model,User,46,0,0,0,19,0,10,0,10,0
+favourite-service,com.favourite,FavouriteServiceApplication,8,0,0,0,3,0,2,0,2,0
+favourite-service,com.favourite.controller,FavouriteController,9,75,0,0,3,18,1,7,1,7
+favourite-service,com.favourite.controller.feign,FavouriteFeignController,7,0,0,0,2,0,2,0,2,0

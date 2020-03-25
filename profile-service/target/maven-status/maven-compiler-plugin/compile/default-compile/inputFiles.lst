@@ -1,0 +1,7 @@
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/controller/UserController.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/model/User.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/jms/rabbitmq/MessageSender.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/dao/UserDao.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/service/UserServiceImpl.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/ProfileServiceApplication.java
+/Users/pushkarchauhan91/Documents/workspaces/workspace_java_niit/github-repository-manager-multi-module/profile-service/src/main/java/com/profile/service/UserService.java

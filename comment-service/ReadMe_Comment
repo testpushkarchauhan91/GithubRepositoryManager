@@ -1,0 +1,82 @@
+GET select all comments
+GET select a comment
+POST create a comment
+PUT  update a comment
+DELETE delete a comment
+
+http://localhost:8082/comment/
+
+1. POST
+http://localhost:8082/comment/
+   {
+        "id": 1,
+        "favourite_items_id": 201,
+        "favourite_items_name": "Apple",
+        "favourite_items_html_url": "www.google.com",
+        "comment_value": "comment"
+  }
+
+{
+      "id": 2,
+      "favourite_items_id": 401,
+      "favourite_items_name": "Monster",
+      "favourite_items_html_url": "www.monster.com",
+      "comment_value": "comment monster"
+}
+
+   {
+        "id": 3,
+        "favourite_items_id": 601,
+        "favourite_items_name": "Samsung",
+        "favourite_items_html_url": "www.samsung.com",
+        "comment_value": "comment"
+    }
+
+2. POST 
+http://localhost:8082/favourites/
+[
+    {
+        "id": 4,
+        "favourite_items_id": 444,
+        "favourite_items_name": "Nike",
+        "favourite_items_html_url": "www.nike.com",
+        "comment_value": "comment nike"
+    },
+    {
+        "id": 5,
+        "favourite_items_id": 555,
+        "favourite_items_name": "Puma",
+        "favourite_items_html_url": "www.puma.com",
+        "comment_value": "comment puma"
+    },
+    {
+        "id": 6,
+        "favourite_items_id": 666,
+        "favourite_items_name": "Reebok",
+        "favourite_items_html_url": "www.reebok.com",
+        "comment_value": "comment reebok"
+    }
+]
+
+2. GET (All favourites)
+http://localhost:8082/favourite/
+
+3. GET (A favourite)
+http://localhost:8082/favourite/1/
+http://localhost:8082/favourite/2/
+http://localhost:8082/favourite/3/
+
+4. PUT (Update favourite)
+http://localhost:8082/favourite/101/
+ Body:
+   {
+        "id": 6,
+        "favourite_items_id": 666,
+        "favourite_items_name": "Reebok",
+        "favourite_items_html_url": "www.reebok.com",
+        "comment_value": "comment reebok updated"
+    }
+    
+
+5. DELETE (Delete a favourite)
+http://localhost:8082/favourite/102/

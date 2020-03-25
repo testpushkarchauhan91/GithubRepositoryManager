@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+profile-service,com.profile.jms.rabbitmq,MessageSender,64,0,0,0,15,0,2,0,2,0
+profile-service,com.profile.model,User,0,46,0,0,0,19,0,10,0,10
+profile-service,com.profile,ProfileServiceApplication,8,0,0,0,3,0,2,0,2,0
+profile-service,com.profile.service,UserServiceImpl,91,0,4,0,24,0,11,0,9,0
+profile-service,com.profile.controller,UserController,12,80,0,0,5,20,1,7,1,7

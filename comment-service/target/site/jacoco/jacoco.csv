@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+comment-service,com.comment.controller,CommentController,31,59,0,0,6,16,2,6,2,6
+comment-service,com.comment,CommentServiceApplication,8,0,0,0,3,0,2,0,2,0
+comment-service,com.comment.jwt.config,WebSecurityConfig,65,0,0,0,13,0,5,0,5,0
+comment-service,com.comment.jwt.config,JwtAuthenticationEntryPoint,8,0,0,0,3,0,2,0,2,0
+comment-service,com.comment.jwt.config,JwtRequestFilter,81,0,10,0,23,0,7,0,2,0
+comment-service,com.comment.jwt.config,JwtTokenUtil,86,0,8,0,13,0,14,0,10,0
+comment-service,com.comment.model,Comment,2,56,0,0,1,23,1,12,1,12
+comment-service,com.comment.jwt.service,JwtUserDetailsService,41,0,4,0,6,0,4,0,2,0
+comment-service,com.comment.service,CommentServiceimpl,46,0,0,0,14,0,9,0,9,0

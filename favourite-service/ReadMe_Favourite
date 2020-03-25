@@ -1,0 +1,76 @@
+GET select all favourites
+GET select a favourite
+POST create a favourite
+PUT  update a favourite
+DELETE delete a favourite
+
+http://localhost:8082/favourite/
+
+1. POST
+http://localhost:8082/favourite/
+{
+	"id":101,
+	"favourite_items_name":"Google",
+	"favourite_items_html_url":"http://www.api.google.com"
+}
+
+{
+	"id":102,
+	"favourite_items_name":"Yahoo",
+	"favourite_items_html_url":"http://www.api.yahoo.com"
+}
+
+{
+	"id":103,
+	"favourite_items_name":"Twitter",
+	"favourite_items_html_url":"http://www.api.twitter.com"
+}
+
+
+2. POST 
+http://localhost:8082/favourites/
+[
+	{
+		"id":104,
+		"favourite_items_name":"Amazon",
+		"favourite_items_html_url":"http://www.api.amazon.com"
+	},
+	{
+		"id":105,
+		"favourite_items_name":"Adobe",
+		"favourite_items_html_url":"http://www.api.adobe.com"
+	},
+	{
+		"id":106,
+		"favourite_items_name":"Snapchat",
+		"favourite_items_html_url":"http://www.api.snapchat.com"
+	}
+]
+
+
+
+2. GET (All favourites)
+http://localhost:8082/favourite/
+
+3. GET (A favourite)
+http://localhost:8082/favourite/101/
+http://localhost:8082/favourite/102/
+http://localhost:8082/favourite/103/
+
+4. PUT (Update favourite)
+http://localhost:8082/favourite/101/
+OLD:
+	{
+    "favourite_items_id":102,
+    "favourite_items_name": "Yahoo_updated",
+    "favourite_items_html_url": "http://www.api.yahoo.com"
+	}
+Body NEW:
+  	{
+    "favourite_items_id": 102,
+    "favourite_items_name": "Yahoo",
+    "favourite_items_html_url": "http://www.api.yahoo.com"
+	}
+
+5. DELETE (Delete a favourite)
+http://localhost:8082/favourite/102/
